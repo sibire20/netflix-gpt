@@ -1,6 +1,27 @@
+
+import { addToCart, clearCart } from "../utilis/cartSlice";
+import HeaderComponent from "./Header";
+import { useDispatch } from "react-redux";
+import {useState, useEffect} from "react";
+import {Now_playingURI, OPTIONS_NOWPLAYING} from "../utilis/constants";
+import {setPlayingMovieListAction} from "../utilis/movieSlice";
+import useNowPlayingMovies from "../custom_hooks/useNowPlayingMovies";
+import MainContainer from "./MainContainer";
+import SecondaryContainer from "./SecondaryContainer";
+
 const BrowseComponent = () => {
+    
+    useNowPlayingMovies();
+ 
     return (
-        <div>Hello, Browse Component!</div>
+        <>
+            <HeaderComponent />
+            <div className="browserComponent">
+                <MainContainer />
+                <SecondaryContainer />
+            </div>
+        </>
+
     )
 }
 

@@ -4,12 +4,17 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 
 import BodyComponent from './components/Body'
+import { Provider } from 'react-redux';
+
+import appStore from './utilis/appStore';
 
 function App() {
 
   return (
     <div className="App">
-      <BodyComponent> </BodyComponent>
+      <Provider store={appStore}>
+          <BodyComponent> </BodyComponent>
+      </Provider>
     </div>
   )
 }

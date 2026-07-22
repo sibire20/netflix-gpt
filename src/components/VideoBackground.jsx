@@ -14,7 +14,7 @@ const VideoBackground = ({ movieId }) => {
      (<iframe
      className="aspect-video"
       
-      src={addAutoPlay}
+      src={movieUrls}
       allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
       allowFullScreen
       sandBox="allow-scripts allow-same-origin" 

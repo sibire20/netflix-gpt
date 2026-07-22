@@ -4,11 +4,15 @@ const nowPlayingMovieSlie = createSlice({
     name: "nowPlayingMovie",
     initialState: {
         playingMoiveList:[],
-        trailerVideo:""
+        trailerVideo:"",
+        popularMovies: []
     },
     reducers :{
         setPlayingMovieListAction:(sate, action) =>{
             sate.playingMoiveList = action.payload;
+        },
+        setPopularMovieListAction:(sate, action) =>{
+            sate.popularMovies = action.payload;
         },
         clearPlayingMovieListAction:(sate) =>{
             sate.playingMoiveList = [];
@@ -19,5 +23,5 @@ const nowPlayingMovieSlie = createSlice({
     }
 });
 
-export const {setPlayingMovieListAction, clearPlayingMovieListAction, setTrailerVideo} = nowPlayingMovieSlie.actions;
+export const {setPlayingMovieListAction, clearPlayingMovieListAction, setTrailerVideo, setPopularMovieListAction} = nowPlayingMovieSlie.actions;
 export default nowPlayingMovieSlie.reducer;
